@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess My Number</title>
+  <link rel="stylesheet" href="guessMyNumber.css" />
+</head>
+<body>
+    <style>
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
+
+body {
+  background-color: rgba(8, 8, 8, 0.986);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+header {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.number {
+  font-size: 5rem;
+  background: white;
+  color: black;
+  width: 100px;
+  height: 100px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.again {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.left input {
+  width: 80px;
+  font-size: 2rem;
+  padding: 5px;
+  text-align: center;
+}
+
+button.check {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+    </style>
+  <header>
+    <button class="again">Again</button>
+    <h1>Guess My Number</h1>
+    <div class="number">?</div>
+  </header>
+  <main>
+    <section class="left">
+      <input type="number" class="guess" min="1" max="20" />
+      <button class="check">Check</button>
+    </section>
+    <section class="right">
+      <p class="message">Start guessing...</p>
+      <p class="label-score">💯 Score: <span class="score">20</span></p>
+      <p class="label-highscore">🥇 Highscore: <span class="highscore">0</span></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
